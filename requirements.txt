@@ -1,0 +1,3 @@
+requests==2.31.0       # stable
+flask==2.3.2           # stable
+pyyaml==5.1            # vulnérable volontairement
