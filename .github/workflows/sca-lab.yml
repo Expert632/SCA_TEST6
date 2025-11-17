@@ -20,5 +20,3 @@ jobs:
 
       - name: Run SCA Scan
         run: bash scan.sh
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
