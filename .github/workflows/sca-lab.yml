@@ -1,0 +1,21 @@
+name: SCA Lab Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Snyk & jq
+        run: npm install -g snyk jq
+
+      - name: Run SCA Scan
+        run: bash scan.sh
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
