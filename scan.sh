@@ -1,13 +1,15 @@
 #!/bin/bash
 
-echo "Début du scan SCA..."
+echo "Starting SCA scan..."
 
-if ! command -v snyk &> /dev/null
-then
-    echo "Snyk non installé. Installer avec : npm install -g snyk jq"
-    exit
-fi
+# Installer Snyk et jq
+npm install -g snyk jq
 
+# Installer les dépendances Python
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+# Lancer le scan
 SCAN_RESULT=$(snyk test --json)
 CRITICAL_COUNT=$(echo "$SCAN_RESULT" | jq '.vulnerabilities[] | select(.severity=="high" or .severity=="critical")' | wc -l)
 
