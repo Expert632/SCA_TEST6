@@ -1,13 +1,4 @@
-# Package stable (de contrôle)
 requests==2.31.0
-
-# Packages volontairement vulnérables pour le lab SCA
-
-# Ancienne version de Flask avec vulnérabilités connues (exposition à des failles de sécurité)
 flask==1.0
-
-# Version vulnérable de PyYAML (risques d'exécution de code arbitraire via yaml.load)
 pyyaml==5.1
-
-# Ancienne version de Jinja2 avec vulnérabilité de template injection
 jinja2==2.10
