@@ -1,4 +1,7 @@
+# Packages stables pour contrôle
 requests==2.31.0
-flask==1.0        # Vulnérabilité volontaire
-pyyaml==5.1       # Vulnérabilité volontaire
-jinja2==2.10      # Vulnérabilité volontaire
+
+# Vulnérabilités volontaires détectables par Snyk
+flask==1.0        # Vulnérabilité RCE historique
+pyyaml==5.1       # Vulnérabilité Arbitrary Code Execution
+jinja2==2.10      # Vulnérabilité Template Injection
