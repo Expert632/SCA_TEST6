@@ -1,3 +1,7 @@
-requests==2.31.0       # stable
-flask==2.3.2           # stable
-pyyaml==5.1            # vulnérable volontairement
+# Stable package
+requests==2.31.0
+
+# Vulnérabilités connues et détectables par Snyk
+flask==1.0            # Vulnérabilité RCE (CVE-2018-1000656)
+pyyaml==5.1            # Vulnérabilité Arbitrary Code Execution (CVE-2017-18342)
+jinja2==2.10           # Vulnérabilité Template Injection (CVE-2019-10906)
